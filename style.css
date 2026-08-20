@@ -59,7 +59,7 @@ body {
 .email {
     position: absolute;
     top: 32px;
-    right: 5.5vw;
+    right: max(6vw, calc((100vw - 1100px) / 2));
 
     color: var(--text);
 
