@@ -126,6 +126,9 @@ body {
     line-height: 1.7;
 }
 
+.activities {
+    white-space: nowrap;
+}
 
 /* SOUNDCLOUD */
 
@@ -207,7 +210,11 @@ footer a {
         right: 8vw;
         font-size: 13px;
     }
-
+    
+    .activities {
+    white-space: normal;
+    }
+    
     .services {
         width: 84vw;
 
