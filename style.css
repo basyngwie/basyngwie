@@ -133,7 +133,15 @@ body {
 
 }
 
+.service h2 {
+    display: none;
+}
 
+@media (max-width: 700px) {
+    .service h2 {
+        display: block;
+    }
+}
 /* MOBIL */
 
 @media (max-width: 700px) {
