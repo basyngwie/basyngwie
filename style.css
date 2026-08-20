@@ -82,7 +82,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
 
-    width: min(1100px, 88vw);
+    width: min(1300px, 92vw);
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -168,7 +168,7 @@ body {
 /* VERKSAMHETER */
 
 .services {
-    width: min(1100px, 88vw);
+    width: min(1300px, 92vw);
     margin: 0 auto;
 
     display: grid;
@@ -211,7 +211,7 @@ body {
 /* SOUNDCLOUD */
 
 .soundcloud {
-    width: min(1100px, 88vw);
+    width: min(1300px, 92vw);
     margin: 0 auto;
 
     padding: 150px 0 170px;
