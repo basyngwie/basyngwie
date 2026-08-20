@@ -74,6 +74,75 @@ body {
 .email:hover {
     color: var(--muted);
 }
+/* HEADERNS RUBRIKER */
+
+.header-services {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1100px, 88vw);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--line);
+}
+
+.header-service {
+    padding: 45px 42px 30px;
+
+    border-right: 1px solid var(--line);
+}
+
+.header-service:first-child {
+    padding-left: 0;
+}
+
+.header-service:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+.header-service h2 {
+    margin: 0;
+
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+
+    letter-spacing: -0.045em;
+    text-transform: lowercase;
+}
+
+
+/* FAST HEADER PÅ DESKTOP */
+
+@media (min-width: 701px) {
+
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        min-height: 35vh;
+
+        background: var(--background);
+    }
+
+}
+
+
+/* MOBIL */
+
+@media (max-width: 700px) {
+
+    .header-services {
+        display: none;
+    }
+
+}
 
 .studio-image {
     width: 100%;
@@ -96,8 +165,6 @@ body {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    border-top: 1px solid var(--line);
 }
 
 .service {
@@ -116,16 +183,7 @@ body {
     border-right: none;
 }
 
-.service h2 {
-    margin: 0 0 28px;
 
-    font-size: clamp(2rem, 3.5vw, 3.5rem);
-    font-weight: 400;
-    line-height: 0.95;
-
-    letter-spacing: -0.045em;
-    text-transform: lowercase;
-}
 
 .service p {
     max-width: 260px;
