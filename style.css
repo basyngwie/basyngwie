@@ -75,6 +75,18 @@ body {
     color: var(--muted);
 }
 
+.studio-image {
+    width: 100%;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.studio-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
 
 /* VERKSAMHETER */
 
@@ -222,6 +234,10 @@ footer a {
         top: 24px;
         right: 8vw;
         font-size: 13px;
+    }
+    
+    .studio-image img {
+        height: 240px;
     }
     
     .activities {
