@@ -1,1 +1,161 @@
+:root {
+    --background: #080808;
+    --text: #f2f2f2;
+    --muted: #999999;
+    --line: #292929;
+}
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* LOGOTYP */
+
+.header {
+    padding: 7vw 6vw 10vw;
+}
+
+.logo {
+    display: block;
+    width: min(420px, 70vw);
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* INNEHÅLL */
+
+main {
+    width: min(900px, 88vw);
+    margin: 0 auto;
+}
+
+.services {
+    border-top: 1px solid var(--line);
+}
+
+.service {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+
+    padding: 42px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+h2 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.service p {
+    max-width: 520px;
+    margin: 0;
+
+    color: #c7c7c7;
+}
+
+
+/* SOUNDCLOUD */
+
+.soundcloud {
+    padding: 110px 0 120px;
+}
+
+.soundcloud h2 {
+    margin-bottom: 28px;
+}
+
+.soundcloud-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 166px;
+
+    border: 1px solid var(--line);
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: min(900px, 88vw);
+    margin: 0 auto;
+
+    padding: 0 0 60px;
+}
+
+footer a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBIL */
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 12vw 6vw 18vw;
+    }
+
+    .logo {
+        width: 70vw;
+    }
+
+    .service {
+        display: block;
+        padding: 30px 0;
+    }
+
+    .service h2 {
+        margin-bottom: 12px;
+    }
+
+    .service p {
+        font-size: 16px;
+    }
+
+    .soundcloud {
+        padding: 75px 0 90px;
+    }
+}
