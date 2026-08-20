@@ -1,3 +1,4 @@
+```css
 :root {
     --background: #0a0a0a;
     --text: #eeeeea;
@@ -58,49 +59,50 @@ body {
 /* VERKSAMHETER */
 
 .services {
-    width: min(1000px, 86vw);
+    width: min(1100px, 88vw);
     margin: 0 auto;
-}
 
-.service {
     display: grid;
-    grid-template-columns: 35% 1fr;
-
-    min-height: 260px;
-
-    padding: 65px 0;
+    grid-template-columns: repeat(3, 1fr);
 
     border-top: 1px solid var(--line);
 }
 
-.service:nth-child(2) {
-    padding-left: 8%;
+.service {
+    min-height: 280px;
+    padding: 45px 42px 50px;
+
+    border-right: 1px solid var(--line);
 }
 
-.service:nth-child(3) {
-    padding-left: 16%;
+.service:first-child {
+    padding-left: 0;
+}
+
+.service:last-child {
+    padding-right: 0;
+    border-right: none;
 }
 
 .service h2 {
-    margin: 0;
+    margin: 0 0 28px;
 
-    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
     font-weight: 400;
     line-height: 0.95;
 
     letter-spacing: -0.045em;
-
     text-transform: lowercase;
 }
 
 .service p {
-    max-width: 420px;
+    max-width: 260px;
 
-    margin: 5px 0 0;
+    margin: 0;
 
     color: var(--muted);
 
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.7;
 }
 
@@ -108,11 +110,10 @@ body {
 /* SOUNDCLOUD */
 
 .soundcloud {
-    width: min(1000px, 86vw);
-
+    width: min(1100px, 88vw);
     margin: 0 auto;
 
-    padding: 180px 0 190px;
+    padding: 150px 0 170px;
 }
 
 .soundcloud h2 {
@@ -120,6 +121,7 @@ body {
 
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 400;
+
     letter-spacing: -0.04em;
 }
 
@@ -144,8 +146,7 @@ body {
 /* KONTAKT */
 
 footer {
-    width: min(1000px, 86vw);
-
+    width: min(1100px, 88vw);
     margin: 0 auto;
 
     padding: 0 0 70px;
@@ -157,8 +158,9 @@ footer a {
     color: var(--text);
 
     font-size: 15px;
-
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 footer a:hover {
@@ -168,7 +170,7 @@ footer a:hover {
 
 /* MOBIL */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     .header {
         min-height: 55vh;
@@ -181,20 +183,27 @@ footer a:hover {
 
     .services {
         width: 84vw;
+
+        display: block;
     }
 
     .service,
-    .service:nth-child(2),
-    .service:nth-child(3) {
-        display: block;
-
+    .service:first-child,
+    .service:last-child {
         min-height: 0;
 
-        padding: 55px 0;
+        padding: 45px 0;
+
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .service:last-child {
+        border-bottom: none;
     }
 
     .service h2 {
-        margin-bottom: 22px;
+        margin-bottom: 18px;
 
         font-size: 3rem;
     }
@@ -206,7 +215,7 @@ footer a:hover {
     .soundcloud {
         width: 84vw;
 
-        padding: 110px 0 130px;
+        padding: 100px 0 120px;
     }
 
     footer {
@@ -217,3 +226,4 @@ footer a:hover {
         text-align: left;
     }
 }
+```
