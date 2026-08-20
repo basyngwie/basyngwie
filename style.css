@@ -1,8 +1,8 @@
 :root {
-    --background: #080808;
-    --text: #f2f2f2;
-    --muted: #999999;
-    --line: #292929;
+    --background: #0a0a0a;
+    --text: #eeeeea;
+    --muted: #8c8c87;
+    --line: #292925;
 }
 
 * {
@@ -27,19 +27,25 @@ body {
         sans-serif;
 
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 
 /* LOGOTYP */
 
 .header {
-    padding: 7vw 6vw 10vw;
+    min-height: 48vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8vw;
 }
 
 .logo {
     display: block;
-    width: min(420px, 70vw);
+    width: min(260px, 48vw);
 }
 
 .logo img {
@@ -49,84 +55,114 @@ body {
 }
 
 
-/* INNEHÅLL */
-
-main {
-    width: min(900px, 88vw);
-    margin: 0 auto;
-}
+/* VERKSAMHETER */
 
 .services {
-    border-top: 1px solid var(--line);
+    width: min(1000px, 86vw);
+    margin: 0 auto;
 }
 
 .service {
     display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 40px;
+    grid-template-columns: 35% 1fr;
 
-    padding: 42px 0;
+    min-height: 260px;
 
-    border-bottom: 1px solid var(--line);
+    padding: 65px 0;
+
+    border-top: 1px solid var(--line);
 }
 
-h2 {
+.service:nth-child(2) {
+    padding-left: 8%;
+}
+
+.service:nth-child(3) {
+    padding-left: 16%;
+}
+
+.service h2 {
     margin: 0;
 
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+
+    letter-spacing: -0.045em;
+
+    text-transform: lowercase;
 }
 
 .service p {
-    max-width: 520px;
-    margin: 0;
+    max-width: 420px;
 
-    color: #c7c7c7;
+    margin: 5px 0 0;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 
 /* SOUNDCLOUD */
 
 .soundcloud {
-    padding: 110px 0 120px;
+    width: min(1000px, 86vw);
+
+    margin: 0 auto;
+
+    padding: 180px 0 190px;
 }
 
 .soundcloud h2 {
-    margin-bottom: 28px;
+    margin: 0 0 35px;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
 }
 
 .soundcloud-placeholder {
+    width: 100%;
+    min-height: 166px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    min-height: 166px;
-
     border: 1px solid var(--line);
+
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 
-/* FOOTER */
+/* KONTAKT */
 
 footer {
-    width: min(900px, 88vw);
+    width: min(1000px, 86vw);
+
     margin: 0 auto;
 
-    padding: 0 0 60px;
+    padding: 0 0 70px;
+
+    text-align: right;
 }
 
 footer a {
     color: var(--text);
+
+    font-size: 15px;
+
     text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: var(--muted);
 }
 
 
@@ -135,27 +171,49 @@ footer a:hover {
 @media (max-width: 650px) {
 
     .header {
-        padding: 12vw 6vw 18vw;
+        min-height: 55vh;
+        padding: 12vw;
     }
 
     .logo {
-        width: 70vw;
+        width: 180px;
     }
 
-    .service {
+    .services {
+        width: 84vw;
+    }
+
+    .service,
+    .service:nth-child(2),
+    .service:nth-child(3) {
         display: block;
-        padding: 30px 0;
+
+        min-height: 0;
+
+        padding: 55px 0;
     }
 
     .service h2 {
-        margin-bottom: 12px;
+        margin-bottom: 22px;
+
+        font-size: 3rem;
     }
 
     .service p {
-        font-size: 16px;
+        max-width: 340px;
     }
 
     .soundcloud {
-        padding: 75px 0 90px;
+        width: 84vw;
+
+        padding: 110px 0 130px;
+    }
+
+    footer {
+        width: 84vw;
+
+        padding-bottom: 45px;
+
+        text-align: left;
     }
 }
