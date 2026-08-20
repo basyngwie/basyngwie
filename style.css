@@ -36,7 +36,7 @@ body {
 .header {
     position: relative;
 
-    min-height: 35vh;
+    min-height: 25vh;
 
     display: flex;
     align-items: center;
