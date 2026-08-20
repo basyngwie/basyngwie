@@ -148,15 +148,19 @@ footer {
     width: min(1100px, 88vw);
     margin: 0 auto;
 
-    padding: 0 0 70px;
+    padding: 0 0 110px;
 
-    text-align: right;
+    text-align: center;
 }
 
 footer a {
     color: var(--text);
 
-    font-size: 15px;
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+
     text-decoration: none;
 
     transition: color 0.2s ease;
