@@ -131,6 +131,10 @@ body {
         background: var(--background);
     }
 
+    .logo {
+        transform: translateY(-15px);
+    }
+
 }
 
 .service h2 {
