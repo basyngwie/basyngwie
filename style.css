@@ -126,7 +126,7 @@ body {
         top: 0;
         z-index: 10;
 
-        min-height: 35vh;
+        min-height: 30vh;
 
         background: var(--background);
     }
